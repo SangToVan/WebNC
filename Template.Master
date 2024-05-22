@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="Test_Data.Template" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Trang chủ</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        .header {
+            background-color: navy;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .function {
+            justify-content:end;
+            text-align: end;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .footer {
+            background-color: lightgray;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <h1>Tô Văn Sáng - Kiểm tra 2</h1>
+        </div>
+        <div class="function">
+            <asp:HyperLink ID="viewListbtn" runat="server" NavigateUrl="~/ListSV.aspx">Xem danh sách</asp:HyperLink>
+            <asp:HyperLink ID="addSVbtn" runat="server" NavigateUrl="~/AddSV.aspx">Thêm sinh viên</asp:HyperLink>
+        </div>
+        
+        <div class="content">
+            <div>
+                <asp:ContentPlaceHolder ID="mainPage" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="listSV" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="addSV" runat="server"></asp:ContentPlaceHolder>
+                <asp:ContentPlaceHolder ID="editSV" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Fit-Haui - 05/2024</p>
+        </div>
+    </form>
+</body>
+</html>
